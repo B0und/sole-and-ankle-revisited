@@ -7,6 +7,7 @@ import Icon from '../Icon'
 import SuperHeader from '../SuperHeader'
 import MobileMenu from '../MobileMenu'
 import UnstyledButton from '../UnstyledButton'
+import VisuallyHidden from '../VisuallyHidden'
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false)
@@ -32,12 +33,15 @@ const Header = () => {
           <NavLink href='/collections'>Collections</NavLink>
           <UnstyledButton>
             <MobileIcon id='shopping-bag' size={24} strokeWidth={2} />
+            <VisuallyHidden>Shopping Bag</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton>
             <MobileIcon id='search' size={24} strokeWidth={2} />
+            <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <MobileIcon id='menu' size={24} strokeWidth={2} />
+            <VisuallyHidden>Navigation Menu</VisuallyHidden>
           </UnstyledButton>
         </Nav>
       </MainHeader>
@@ -54,7 +58,6 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 
   @media ${QUERIES.tablet} {

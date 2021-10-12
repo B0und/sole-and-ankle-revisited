@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components/macro';
+import { createGlobalStyle } from 'styled-components/macro'
+
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -76,6 +77,6 @@ html {
 html, body, #root {
   height: 100%;
 }
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

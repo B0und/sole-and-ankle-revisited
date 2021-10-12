@@ -5,6 +5,7 @@ import Header from '../Header'
 import ShoeIndex from '../ShoeIndex'
 import { QUERIES } from '../../constants'
 
+
 const App = () => {
   const [sortId, setSortId] = React.useState('newest')
 
