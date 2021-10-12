@@ -54,7 +54,7 @@ const Content = styled(DialogContent)`
 
   position: relative;
   background: white;
-  width: 75%;
+  width: 300px;
   height: 100%;
   margin-left: auto;
 
