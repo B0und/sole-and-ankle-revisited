@@ -65,8 +65,7 @@ const Content = styled(DialogContent)`
 
 const CloseButton = styled(UnstyledButton)`
   align-self: flex-end;
-  padding-top: 26px;
-  padding-right: 16px;
+  padding: 16px;
 `
 
 const Nav = styled.nav`
