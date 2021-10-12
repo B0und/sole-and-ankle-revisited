@@ -24,11 +24,11 @@ const Header = () => {
           <Logo />
         </Side>
         <Nav>
-          <NavLink href='/sale'>Sale</NavLink>
+          <NavLink href='/sale'>a vendre</NavLink>
           <NavLink href='/new'>New&nbsp;Releases</NavLink>
-          <NavLink href='/men'>Men</NavLink>
-          <NavLink href='/women'>Women</NavLink>
-          <NavLink href='/kids'>Kids</NavLink>
+          <NavLink href='/men'>hommes</NavLink>
+          <NavLink href='/women'>femmes</NavLink>
+          <NavLink href='/kids'>les enfants</NavLink>
           <NavLink href='/collections'>Collections</NavLink>
           <UnstyledButton>
             <MobileIcon id='shopping-bag' size={24} strokeWidth={2} />
@@ -64,8 +64,11 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
-  margin: 0px 48px;
+  gap: clamp(1rem, 14vw - 7.5rem, 3rem);
+
+  margin-left: clamp(1rem, 14vw - 7.5rem, 3rem);
+
+  overflow: auto;
 
   @media ${QUERIES.tablet} {
     gap: 34px;
@@ -84,6 +87,7 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
+  white-space: nowrap;
 
   &:first-of-type {
     color: ${COLORS.secondary};
