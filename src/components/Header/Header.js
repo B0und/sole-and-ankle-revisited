@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { COLORS, WEIGHTS, QUERIES } from '../../constants'
+import { WEIGHTS, QUERIES } from '../../constants'
 import Logo from '../Logo'
 import Icon from '../Icon'
 import SuperHeader from '../SuperHeader'
 import MobileMenu from '../MobileMenu'
 import UnstyledButton from '../UnstyledButton'
 import VisuallyHidden from '../VisuallyHidden'
+import Spacer from '../Spacer'
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false)
@@ -44,6 +45,7 @@ const Header = () => {
             <VisuallyHidden>Navigation Menu</VisuallyHidden>
           </UnstyledButton>
         </Nav>
+        <DesktopSpacer />
       </MainHeader>
 
       <MobileMenu
@@ -57,11 +59,12 @@ const Header = () => {
 const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   padding: 18px 32px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
 
   @media ${QUERIES.tablet} {
-    border-top: 4px solid ${COLORS.gray[900]};
+    border-top: 4px solid var(--color-gray-900);
   }
 `
 
@@ -78,6 +81,12 @@ const Nav = styled.nav`
     margin-left: 34px;
     margin-right: 0px;
   }
+
+  @media ${QUERIES.phone} {
+    gap: 16px;
+    margin-left: 16px;
+    margin-right: 0px;
+  }
 `
 
 const Side = styled.div`
@@ -88,12 +97,12 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
   white-space: nowrap;
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 
   @media ${QUERIES.tablet} {
@@ -105,6 +114,13 @@ const MobileIcon = styled(Icon)`
   display: none;
   @media ${QUERIES.tablet} {
     display: block;
+  }
+`
+const DesktopSpacer = styled(Spacer)`
+  flex: 1;
+
+  @media ${QUERIES.tablet} {
+    display: none;
   }
 `
 

@@ -81,10 +81,10 @@ const NavLink = styled.a`
   font-size: ${18 / 16}rem;
   font-weight: ${WEIGHTS.medium};
   text-transform: uppercase;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `
 
@@ -99,6 +99,6 @@ const Footer = styled.footer`
 const FooterLink = styled.a`
   text-decoration: none;
   font-size: ${14 / 16}rem;
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
 `
 export default MobileMenu
